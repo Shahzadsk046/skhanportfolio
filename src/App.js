@@ -8,7 +8,6 @@ import Portfolio from './Components/Portfolio/Portfolio';
 function App() {
   return (
     <div>
-    <h1>Hello</h1>
     <Header />
     <About />
     <Portfolio />
