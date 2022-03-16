@@ -1,4 +1,4 @@
-import { Box, IconButton, Typography } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 import ArrowDownwardRoundedIcon from "@material-ui/icons/ArrowDownwardRounded";
 import React from "react";
 import { useStyles } from "./HeaderStyle";
