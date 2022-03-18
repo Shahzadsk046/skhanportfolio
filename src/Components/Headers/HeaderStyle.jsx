@@ -40,10 +40,10 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "2rem",
     margin: theme.spacing(1,0),
     [theme.breakpoints.down('sm')]: {
-      fontSize: "1.6rem",
+      fontSize: "1.7rem",
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: "1.3rem",
+      fontSize: "1.4rem",
       margin: theme.spacing(2,0),
     },
   },
