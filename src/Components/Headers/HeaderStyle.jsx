@@ -26,25 +26,25 @@ export const useStyles = makeStyles((theme) => ({
 
   HeaderTitle: {
     fontSize: "3rem",
-    margin: theme.spacing(1,0),
+    margin: theme.spacing(1, 0),
     textAlign: "left",
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       fontSize: "2.5rem",
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("xs")]: {
       fontSize: "2rem",
     },
   },
-  
+
   HeaderDesc: {
     fontSize: "2rem",
-    margin: theme.spacing(1,0),
-    [theme.breakpoints.down('sm')]: {
+    margin: theme.spacing(1, 0),
+    [theme.breakpoints.down("sm")]: {
       fontSize: "1.7rem",
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("xs")]: {
       fontSize: "1.4rem",
-      margin: theme.spacing(2,0),
+      margin: theme.spacing(2, 0),
     },
   },
 
@@ -105,4 +105,20 @@ export const useStyles = makeStyles((theme) => ({
       },
     },
   },
+
+  // Drawer Style
+  drawer: {
+    width: "250px",
+    height: "100vh",
+  },
+
+  drawerContainer: {
+    width: "250px",
+    height: "100vh",
+    backgroundColor: Theme.colors.primary1,
+  },
+
+  listItem:{
+    color: Theme.colors.base2,
+  }
 }));

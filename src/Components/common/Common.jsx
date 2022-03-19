@@ -2,7 +2,7 @@ import { Avatar, Box, Grid, Typography } from "@material-ui/core";
 // import ArrowDownwardRoundedIcon from "@material-ui/icons/ArrowDownwardRounded";
 import React from "react";
 import { useStyles } from "../Headers/HeaderStyle";
-import bodyStyles from "../BodyComponents/BodyStyle";
+import { bodyStyles } from "../BodyComponents/BodyStyle";
 
 export const Decorator = ({ label, withIcon, Icon, styles }) => {
   const classes = useStyles();

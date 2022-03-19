@@ -1,7 +1,8 @@
 import { Box, Button, Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import { RenderSectionHeading } from "../common/Common";
-import bodyStyles from "./BodyStyle";
+import { bodyStyles } from "./BodyStyle";
+import ScrollAnimation from "react-animate-on-scroll";
 import pf1 from "../../images/pf1.jpg";
 import pf2 from "../../images/pf2.jpg";
 import pf3 from "../../images/pf3.jpg";
@@ -22,42 +23,46 @@ const Portfolio = () => {
   ];
   return (
     <Box className={classes.sectionDark} id="Portfolio">
-      <Grid
-        container
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignContent: "center",
-        }}
-      >
-        <Grid item xs={12} sm={8}>
-          {RenderSectionHeading({
-            smallText: "Portfolio",
-            heading: "Let's See My Work",
-            alignCenter: true,
-          })}
+        <Grid
+          container
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+          }}
+        >
+          <Grid item xs={12} sm={8}>
+            {RenderSectionHeading({
+              smallText: "Portfolio",
+              heading: "Let's See My Work",
+              alignCenter: true,
+            })}
+          </Grid>
         </Grid>
-      </Grid>
-      {/* Image Section */}
-      <Container maxWidth="xl">
-        <Grid container spacing={2}>
-          {portfolioData.map((item, i) => (
-            <Grid item xs={6} sm={6} lg={3} key={i}>
-              <Box className={classes.imageContainer}>
-                <img
-                  src={item.url}
-                  alt={item.title}
-                  className={classes.responsiveImage}
-                />
-                <Box className={classes.imageOverlay}>
-                  <Typography className={classes.overlayTitle}>{item.title}</Typography>
-                  <Button variant="contained">Visit</Button>
+        {/* Image Section */}
+      <ScrollAnimation animateIn="fadeIn">
+        <Container maxWidth="xl">
+          <Grid container spacing={2}>
+            {portfolioData.map((item, i) => (
+              <Grid item xs={6} sm={6} lg={3} key={i}>
+                <Box className={classes.imageContainer}>
+                  <img
+                    src={item.url}
+                    alt={item.title}
+                    className={classes.responsiveImage}
+                  />
+                  <Box className={classes.imageOverlay}>
+                    <Typography className={classes.overlayTitle}>
+                      {item.title}
+                    </Typography>
+                    <Button variant="contained">Visit</Button>
+                  </Box>
                 </Box>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </ScrollAnimation>
     </Box>
   );
 };

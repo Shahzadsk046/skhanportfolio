@@ -1,14 +1,14 @@
 import { makeStyles } from "@material-ui/core";
 import Theme from "../Theme";
 
-const bodyStyles = makeStyles((theme) => ({
+export const bodyStyles = makeStyles((theme) => ({
   section: {
     backgroundColor: Theme.colors.base1,
     padding: theme.spacing(10, 0, 8, 0),
   },
   sectionDark: {
     backgroundColor: Theme.colors.primary1,
-    padding: theme.spacing(10, 0, 8, 0),
+    padding: theme.spacing(2, 0),
   },
 
   divider: {
@@ -94,6 +94,23 @@ const bodyStyles = makeStyles((theme) => ({
       backgroundColor: Theme.colors.primary1,
     },
   },
+
+
+  // Footer Section
+  footerContainer: {
+    backgroundColor: Theme.colors.primary1,
+    color: Theme.colors.base2,
+    padding: theme.spacing(2),
+    position: "relative",
+  },
+
+  iconButton: {
+    position: "absolute",
+    right: 5,
+    top: -25,
+    backgroundColor: Theme.colors.primary,
+    color: Theme.colors.base2,
+  },
 }));
 
-export default bodyStyles;
+// export default bodyStyles;

@@ -1,24 +1,12 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Hidden,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@material-ui/core";
-import MenuOpenRoundedIcon from "@material-ui/icons/MenuOpenRounded";
 import React from "react";
+import { AppBar, Box, Button, Hidden, IconButton, Toolbar, Typography } from "@material-ui/core";
+import MenuOpenRoundedIcon from "@material-ui/icons/MenuOpenRounded";
 import { useStyles } from "./HeaderStyle";
+import { Link } from "react-scroll";
 
-const Navbar = () => {
+const Navbar = ({ navlinks, handleDrawerToggler }) => {
   const classes = useStyles();
 
-  const navlinks = [
-    { label: "About", id: "About" },
-    { label: "Portfolio", id: "Portfolio" },
-    { label: "Contact", id: "Contact" },
-  ];
   return (
     <AppBar position="fixed" className={classes.navbar}>
       <Toolbar className={classes.Toolbar}>
@@ -28,13 +16,26 @@ const Navbar = () => {
         <Box component={Hidden} xsDown>
           <Box>
             {navlinks.map((item, i) => (
-              <Button key={i} className={classes.navlinks}>{item.label}</Button>
+              <Button
+                key={i}
+                className={classes.navlinks}
+                activeClass="active"
+                to={`${item.id}`}
+                component={Link}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                color="inherit"
+              >
+                {item.label}
+              </Button>
             ))}
           </Box>
         </Box>
         <Box component={Hidden} smUp>
-          <IconButton color="inherit" onClick={()=>console.log("menu clicked")}>
-              <MenuOpenRoundedIcon />
+          <IconButton color="inherit" onClick={handleDrawerToggler}>
+            <MenuOpenRoundedIcon />
           </IconButton>
         </Box>
       </Toolbar>
