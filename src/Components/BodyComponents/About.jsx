@@ -39,7 +39,7 @@ const About = () => {
     },
   ];
   return (
-    <Box className={classes.section}>
+    <Box className={classes.section} id="About">
       <Container>
         <Grid container spacing={2}>
           <Grid item sm={5}>

@@ -86,4 +86,12 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: "1.2rem",
     },
   },
+
+  submitBtn: {
+    backgroundColor: Theme.colors.primary,
+    color: Theme.colors.base2,
+    "&:hover": {
+      backgroundColor: Theme.colors.primary1,
+    },
+  },
 }));
