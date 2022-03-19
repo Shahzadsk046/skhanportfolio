@@ -20,14 +20,13 @@ export const Decorator = ({ label, withIcon, Icon, styles }) => {
   );
 };
 
-export const Divider = () => {
+export const Divider = ({ style }) => {
   const classes = bodyStyles();
   return (
-    <Typography
-      variant="span"
-      component="h6"
+    <div
       className={classes.divider}
-    ></Typography>
+      style={style}
+    ></div>
   );
 };
 
@@ -53,7 +52,7 @@ export const RenderSectionHeading = ({
         {heading}
       </Typography>
 
-      {Divider()}
+      {Divider({style: alignCenter ? {margin: "16px auto"} : {margin: "16px 0px"}})}
 
       <Typography
         variant="body1"
@@ -66,16 +65,18 @@ export const RenderSectionHeading = ({
   );
 };
 
-export const CardMedia = ({label, Desc, Icon, key}) => {
+export const CardMedia = ({ label, Desc, Icon, key }) => {
   const classes = bodyStyles();
   return (
-    <Grid container style={{marginTop: "10px"}}>
-      <Grid item xs={3} className={classes.AvatarCont}>
+    <Grid container style={{ marginTop: "10px" }}>
+      <Grid item xs={3} sm={4} className={classes.AvatarCont}>
         <Avatar className={classes.avatar}>{Icon}</Avatar>
       </Grid>
-      <Grid item xs={9} className={classes.MediaText}>
-          <Typography variant="body1" component="h6">{label}</Typography>
-          <Typography variant="caption">{Desc}</Typography>
+      <Grid item xs={9} sm={8} className={classes.MediaText}>
+        <Typography variant="body1" component="h6">
+          {label}
+        </Typography>
+        <Typography variant="caption">{Desc}</Typography>
       </Grid>
     </Grid>
   );

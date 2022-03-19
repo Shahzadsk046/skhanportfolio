@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Hidden } from "@material-ui/core";
 import React from "react";
-import { useStyles } from "../BodyComponents/BodyStyle";
+import { useStyles } from "./BodyStyle";
 import image from "../../images/About.jpg";
 import { CardMedia, RenderSectionHeading } from "../common/Common";
 import {
@@ -69,7 +69,7 @@ const About = () => {
             {/* </Box> */}
             <Grid container>
               {cardMediaData.map((item, i) => (
-                <Grid item xs={12} sm={6} key={i}>
+                <Grid item xs={12} sm={6} md={6} key={i}>
                   {CardMedia({
                     label: item.title,
                     Desc: item.description,
@@ -81,7 +81,6 @@ const About = () => {
           </Grid>
         </Grid>
       </Container>
-      <h1>About Section Works</h1>
     </Box>
   );
 };

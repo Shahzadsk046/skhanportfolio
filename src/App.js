@@ -1,20 +1,19 @@
-import './App.css';
-import About from './Components/About/About';
-import Contact from './Components/Contact/Contact';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Headers/Header';
-import Portfolio from './Components/Portfolio/Portfolio';
+import "./App.css";
+import About from "./Components/BodyComponents/About";
+import Contact from "./Components/BodyComponents/Contact";
+import Portfolio from "./Components/BodyComponents/Portfolio";
+import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Headers/Header";
 
 function App() {
   return (
     <div>
-    <Header />
-    <About />
-    <Portfolio />
-    <Contact />
-    <Footer />
+      <Header />
+      <About />
+      <Portfolio />
+      <Contact />
+      <Footer />
     </div>
-
   );
 }
 
