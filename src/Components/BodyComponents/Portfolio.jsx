@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import { RenderSectionHeading } from "../common/Common";
-import { useStyles } from "./BodyStyle";
+import bodyStyles from "./BodyStyle";
 import pf1 from "../../images/pf1.jpg";
 import pf2 from "../../images/pf2.jpg";
 import pf3 from "../../images/pf3.jpg";
@@ -10,7 +10,7 @@ import pf5 from "../../images/pf5.jpg";
 import pf6 from "../../images/pf6.jpg";
 
 const Portfolio = () => {
-  const classes = useStyles();
+  const classes = bodyStyles();
 
   const portfolioData = [
     { url: pf1, title: "# Portfolio ", link: "" },

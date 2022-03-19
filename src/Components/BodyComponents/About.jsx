@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Hidden } from "@material-ui/core";
 import React from "react";
-import { useStyles } from "./BodyStyle";
+import bodyStyles from "./BodyStyle";
 import image from "../../images/About.jpg";
 import { CardMedia, RenderSectionHeading } from "../common/Common";
 import {
@@ -11,7 +11,7 @@ import {
 } from "@material-ui/icons";
 
 const About = () => {
-  const classes = useStyles();
+  const classes = bodyStyles();
   const cardMediaData = [
     {
       title: "Web Development",

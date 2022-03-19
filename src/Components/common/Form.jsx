@@ -1,6 +1,6 @@
 import { makeStyles, TextField } from "@material-ui/core";
 import React from "react";
-import { Theme } from "../Theme";
+import Theme from "../Theme";
 
 const useStyles = makeStyles((theme) => ({
   cssLabel: {

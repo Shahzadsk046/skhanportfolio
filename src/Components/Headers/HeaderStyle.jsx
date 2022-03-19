@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import { Theme } from "../Theme";
+import Theme from "../Theme";
 import Image from "../../images/brandBanner.jpg";
 
 export const useStyles = makeStyles((theme) => ({

@@ -1,19 +1,12 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Hidden,
-  TextField,
-} from "@material-ui/core";
-import { useStyles } from "./BodyStyle";
+import { Box, Button, Container, Grid, Hidden } from "@material-ui/core";
+import bodyStyles from "./BodyStyle";
 import image from "../../images/About.jpg";
 import { RenderSectionHeading } from "../common/Common";
 import { RenderInputText } from "../common/Form";
 
 const Contact = () => {
-  const classes = useStyles();
+  const classes = bodyStyles();
   const [state, setState] = useState({
     data: {
       firstName: "",
