@@ -1,28 +1,38 @@
-import { makeStyles, TextField } from "@material-ui/core";
 import React from "react";
-import Theme from "../Theme";
+import { makeStyles } from "@material-ui/core/styles";
+import { TextField } from "@material-ui/core";
+import { Themes } from "../Themes";
+
+// const Themes = {
+//   colors: {
+//     base1: "#1e464a !important",
+//     base2: "#fff !important",
+//     primary: "#0097a7 !important",
+//     primary1: "#1e464a !important",
+//   },
+// };
 
 const useStyles = makeStyles((theme) => ({
   cssLabel: {
     color: "#d3d3d3",
     "&.Mu-focused": {
-      color: Theme.colors.primary,
+      color: Themes.colors.primary,
     },
   },
   // Input props root
   cssOutlinedInput: {
     "&:not(hover):not($disabled):not($cssFocused):not($error) $notchedOutline":
       {
-        borderColor: Theme.colors.base2, //default
+        borderColor: Themes.colors.base2, //default
         opacity: 0.5,
       },
     "&:hover:not($disabled):not($cssFocused):not($error) $notchedOutline": {
       opacity: 1,
-      borderColor: Theme.colors.base2, // hovered #DCDCDC
+      borderColor: Themes.colors.base2, // hovered #DCDCDC
     },
     "&$cssFocused $notchedOutline": {
-      borderColor: Theme.colors.primary, //focused
-      color: Theme.colors.primary,
+      borderColor: Themes.colors.primary, //focused
+      color: Themes.colors.primary,
     },
   },
   notchedOutline: {},

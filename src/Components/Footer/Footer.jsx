@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, IconButton, Typography } from "@material-ui/core";
-import { bodyStyles } from "../BodyComponents/BodyStyle";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { Link } from "react-scroll";
+import { bodyStyles } from "../BodyComponents/BodyStyle";
 
 const Footer = () => {
   const classes = bodyStyles();

@@ -1,6 +1,15 @@
-import { makeStyles } from "@material-ui/core";
-import Theme from "../Theme";
+import { makeStyles } from "@material-ui/core/styles";
+import { Themes } from "../Themes";
 import Image from "../../images/brandBanner.jpg";
+
+// const Themes = {
+//   colors: {
+//     base1: "#1e464a !important",
+//     base2: "#fff !important",
+//     primary: "#0097a7 !important",
+//     primary1: "#1e464a !important",
+//   },
+// };
 
 export const useStyles = makeStyles((theme) => ({
   HeaderWrapper: {
@@ -10,14 +19,13 @@ export const useStyles = makeStyles((theme) => ({
     background: `linear-gradient(to bottom right, #303140, #00606473), url(${Image})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    // backgroundColor: Theme.colors.base1,
   },
   HeaderContainer: {
     width: "85%",
     minHeight: "90vh",
     height: "auto",
     padding: "20px",
-    color: Theme.colors.base2,
+    color: Themes.colors.base2,
     display: "flex",
     flexFlow: "column wrap",
     justifyContent: "center",
@@ -48,9 +56,9 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
 
-  navbar: {
-    backgroundColor: Theme.colors.base1,
-    color: Theme.colors.base2,
+  navbarContainer: {
+    backgroundColor: Themes.colors.base1,
+    color: Themes.colors.base2,
   },
   Toolbar: {
     display: "flex",
@@ -58,7 +66,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   navlinks: {
-    color: Theme.colors.base2,
+    color: Themes.colors.base2,
   },
 
   // decorator
@@ -71,7 +79,7 @@ export const useStyles = makeStyles((theme) => ({
     "&:before": {
       width: "45px",
       height: "45px",
-      backgroundColor: Theme.colors.primary,
+      backgroundColor: Themes.colors.primary,
       content: '""',
       borderRadius: "50%",
     },
@@ -115,10 +123,10 @@ export const useStyles = makeStyles((theme) => ({
   drawerContainer: {
     width: "250px",
     height: "100vh",
-    backgroundColor: Theme.colors.primary1,
+    backgroundColor: Themes.colors.primary1,
   },
 
-  listItem:{
-    color: Theme.colors.base2,
-  }
+  listItem: {
+    color: Themes.colors.base2,
+  },
 }));

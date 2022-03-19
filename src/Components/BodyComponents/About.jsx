@@ -1,6 +1,5 @@
-import { Box, Container, Grid, Hidden } from "@material-ui/core";
 import React from "react";
-import { bodyStyles } from "./BodyStyle";
+import { Box, Container, Grid, Hidden } from "@material-ui/core";
 import image from "../../images/About.jpg";
 import { CardMedia, RenderSectionHeading } from "../common/Common";
 import {
@@ -10,6 +9,7 @@ import {
   ToysOutlined,
 } from "@material-ui/icons";
 import ScrollAnimation from "react-animate-on-scroll";
+import { bodyStyles } from "./BodyStyle";
 
 const About = () => {
   const classes = bodyStyles();
@@ -41,49 +41,48 @@ const About = () => {
   ];
   return (
     <Box className={classes.section} id="About">
-      <ScrollAnimation animateIn="fadeIn">
-        <Container>
-          <Grid container spacing={2}>
-            <Grid item sm={5}>
-              <Box component={Hidden} xsDown>
-                <img
-                  src={image}
-                  alt="about us"
-                  className={classes.responsiveImage}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={7}>
-              {/* <Box className={classes.aboutBox}> */}
-              {RenderSectionHeading({
-                smallText: "ABOUT ME",
-                heading: "Hi I'm Shehzad Khan",
-                description:
-                  "A self taught and motivated developer who loves to codes something that will impact majority of the people in good way!",
-                // alignCenter: false,
-              })}
-              <br />
-              {/* {CardMedia({
+      <ScrollAnimation></ScrollAnimation>
+      <Container>
+        <Grid container spacing={2}>
+          <Grid item sm={5}>
+            <Box component={Hidden} xsDown>
+              <img
+                src={image}
+                alt="about us"
+                className={classes.responsiveImage}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={7}>
+            {/* <Box className={classes.aboutBox}> */}
+            {RenderSectionHeading({
+              smallText: "ABOUT ME",
+              heading: "Hi I'm Shehzad Khan",
+              description:
+                "A self taught and motivated developer who loves to codes something that will impact majority of the people in good way!",
+              // alignCenter: false,
+            })}
+            <br />
+            {/* {CardMedia({
               label: "Label1",
               Desc: "Desc1",
               Icon: <AccessAlarm />,
             })} */}
-              {/* </Box> */}
-              <Grid container>
-                {cardMediaData.map((item, i) => (
-                  <Grid item xs={12} sm={6} md={6} key={i}>
-                    {CardMedia({
-                      label: item.title,
-                      Desc: item.description,
-                      Icon: item.icon,
-                    })}
-                  </Grid>
-                ))}
-              </Grid>
+            {/* </Box> */}
+            <Grid container>
+              {cardMediaData.map((item, i) => (
+                <Grid item xs={12} sm={6} md={6} key={i}>
+                  {CardMedia({
+                    label: item.title,
+                    Desc: item.description,
+                    Icon: item.icon,
+                  })}
+                </Grid>
+              ))}
             </Grid>
           </Grid>
-        </Container>
-      </ScrollAnimation>
+        </Grid>
+      </Container>
     </Box>
   );
 };

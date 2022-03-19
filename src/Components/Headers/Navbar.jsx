@@ -1,14 +1,22 @@
 import React from "react";
-import { AppBar, Box, Button, Hidden, IconButton, Toolbar, Typography } from "@material-ui/core";
+import {
+  AppBar,
+  Box,
+  Button,
+  Hidden,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
 import MenuOpenRoundedIcon from "@material-ui/icons/MenuOpenRounded";
-import { useStyles } from "./HeaderStyle";
 import { Link } from "react-scroll";
+import { useStyles } from "./HeaderStyle";
 
 const Navbar = ({ navlinks, handleDrawerToggler }) => {
   const classes = useStyles();
 
   return (
-    <AppBar position="fixed" className={classes.navbar}>
+    <AppBar position="fixed" className={classes.navbarContainer}>
       <Toolbar className={classes.Toolbar}>
         <Typography variant="h5" component="h6">
           {"<Shehzad Khan />"}

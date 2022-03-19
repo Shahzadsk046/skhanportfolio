@@ -1,20 +1,29 @@
-import { makeStyles } from "@material-ui/core";
-import Theme from "../Theme";
+import { makeStyles } from "@material-ui/core/styles";
+import { Themes } from "../Themes";
+
+// const Themes = {
+//   colors: {
+//     base1: "#1e464a !important",
+//     base2: "#fff !important",
+//     primary: "#0097a7 !important",
+//     primary1: "#1e464a !important",
+//   },
+// };
 
 export const bodyStyles = makeStyles((theme) => ({
   section: {
-    backgroundColor: Theme.colors.base1,
+    backgroundColor: Themes.colors.base1,
     padding: theme.spacing(10, 0, 8, 0),
   },
   sectionDark: {
-    backgroundColor: Theme.colors.primary1,
+    backgroundColor: Themes.colors.primary1,
     padding: theme.spacing(2, 0),
   },
 
   divider: {
     width: "65px",
     height: "4px",
-    backgroundColor: Theme.colors.primary,
+    backgroundColor: Themes.colors.primary,
   },
 
   responsiveImage: {
@@ -25,16 +34,16 @@ export const bodyStyles = makeStyles((theme) => ({
 
   sectionHeadingCont: {
     padding: theme.spacing(1),
-    color: Theme.colors.base2,
+    color: Themes.colors.base2,
   },
 
   sectionHeading: {
-    color: Theme.colors.base2,
+    color: Themes.colors.base2,
     margin: theme.spacing(2, 0),
   },
 
   sectionDesc: {
-    color: Theme.colors.base2,
+    color: Themes.colors.base2,
     margin: theme.spacing(2, 0),
   },
 
@@ -46,12 +55,12 @@ export const bodyStyles = makeStyles((theme) => ({
   },
 
   avatar: {
-    backgroundColor: Theme.colors.primary,
-    color: Theme.colors.base2,
+    backgroundColor: Themes.colors.primary,
+    color: Themes.colors.base2,
   },
 
   MediaText: {
-    color: Theme.colors.base2,
+    color: Themes.colors.base2,
     padding: theme.spacing(2, 0),
   },
 
@@ -69,8 +78,8 @@ export const bodyStyles = makeStyles((theme) => ({
     height: "100%",
     top: 0,
     left: 0,
-    backgroundColor: Theme.colors.primary,
-    color: Theme.colors.base2,
+    backgroundColor: Themes.colors.primary,
+    color: Themes.colors.base2,
     display: "flex",
     flexFlow: "column wrap",
     justifyContent: "center",
@@ -88,28 +97,27 @@ export const bodyStyles = makeStyles((theme) => ({
   },
 
   submitBtn: {
-    backgroundColor: Theme.colors.primary,
-    color: Theme.colors.base2,
+    backgroundColor: Themes.colors.primary,
+    color: Themes.colors.base2,
     "&:hover": {
-      backgroundColor: Theme.colors.primary1,
+      backgroundColor: Themes.colors.primary1,
     },
   },
 
-
   // Footer Section
   footerContainer: {
-    backgroundColor: Theme.colors.primary1,
-    color: Theme.colors.base2,
+    backgroundColor: Themes.colors.primary1,
+    color: Themes.colors.base2,
     padding: theme.spacing(2),
     position: "relative",
   },
 
   iconButton: {
-    position: "absolute",
-    right: 5,
-    top: -25,
-    backgroundColor: Theme.colors.primary,
-    color: Theme.colors.base2,
+    position: "absolute !important",
+    right: "5px !important",
+    top: "-25px !important",
+    backgroundColor: Themes.colors.primary,
+    color: Themes.colors.base2,
   },
 }));
 

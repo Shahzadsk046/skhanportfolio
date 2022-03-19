@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Box, Button, Container, Grid, Hidden } from "@material-ui/core";
-import { bodyStyles } from "./BodyStyle";
 import image from "../../images/About.jpg";
 import { RenderSectionHeading } from "../common/Common";
 import { RenderInputText } from "../common/Form";
 import ScrollAnimation from "react-animate-on-scroll";
+import { bodyStyles } from "./BodyStyle";
 
 const Contact = () => {
   const classes = bodyStyles();

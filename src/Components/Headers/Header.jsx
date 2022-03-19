@@ -1,11 +1,11 @@
+import React, { useState } from "react";
 import { Box, Typography } from "@material-ui/core";
 import ArrowDownwardRoundedIcon from "@material-ui/icons/ArrowDownwardRounded";
-import React, { useState } from "react";
 import ReactTyped from "react-typed";
 import { Decorator } from "../common/Common";
 import DrawerComp from "./DrawerComp";
-import { useStyles } from "./HeaderStyle";
 import Navbar from "./Navbar";
+import { useStyles } from "./HeaderStyle";
 
 const Header = () => {
   const classes = useStyles();
